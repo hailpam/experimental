@@ -1,0 +1,83 @@
+==18304== Memcheck, a memory error detector
+==18304== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==18304== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==18304== Command: bin/test_file_reader
+==18304== Parent PID: 18303
+==18304== 
+--18304-- 
+--18304-- Valgrind options:
+--18304--    --tool=memcheck
+--18304--    --leak-check=yes
+--18304--    --log-file=test_file_reader-valgrind.log
+--18304--    -v
+--18304-- Contents of /proc/version:
+--18304--   Linux version 3.6.10-4.fc18.x86_64 (mockbuild@) (gcc version 4.7.2 20121109 (Red Hat 4.7.2-8) (GCC) ) #1 SMP Tue Dec 11 18:01:27 UTC 2012
+--18304-- Arch and hwcaps: AMD64, amd64-sse3-cx16
+--18304-- Page sizes: currently 4096, max supported 4096
+--18304-- Valgrind library directory: /usr/lib64/valgrind
+--18304-- Reading syms from /home/hailpam/Developments/c++-workspace/ncctest/bin/test_file_reader
+--18304-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--18304--    object doesn't have a dynamic symbol table
+--18304-- Reading syms from /usr/lib64/ld-2.16.so
+--18304-- Scheduler: using generic scheduler lock implementation.
+--18304-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==18304== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-18304-by-hailpam-on-PM-PC.home
+==18304== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-18304-by-hailpam-on-PM-PC.home
+==18304== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-18304-by-hailpam-on-PM-PC.home
+==18304== 
+==18304== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==18304== don't want to do, unless you know exactly what you're doing,
+==18304== or are doing some strange experiment):
+==18304==   /usr/lib64/valgrind/../../bin/vgdb --pid=18304 ...command...
+==18304== 
+==18304== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==18304==   /path/to/gdb bin/test_file_reader
+==18304== and then give GDB the following command
+==18304==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=18304
+==18304== --pid is optional if only one valgrind process is running
+==18304== 
+--18304-- REDIR: 0x362fa17f90 (strlen) redirected to 0x3806e111 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--18304-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--18304-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+--18304-- REDIR: 0x362fa17e00 (index) redirected to 0x4a08e80 (index)
+--18304-- REDIR: 0x362fa17e80 (strcmp) redirected to 0x4a09e90 (strcmp)
+--18304-- Reading syms from /usr/lib64/librt-2.16.so
+--18304-- Reading syms from /usr/lib64/libstdc++.so.6.0.17
+--18304--    object doesn't have a symbol table
+--18304-- Reading syms from /usr/lib64/libm-2.16.so
+--18304-- Reading syms from /usr/lib64/libgcc_s-4.7.2-20121109.so.1
+--18304--    object doesn't have a symbol table
+--18304-- Reading syms from /usr/lib64/libc-2.16.so
+--18304-- Reading syms from /usr/lib64/libpthread-2.16.so
+--18304-- REDIR: 0x362fe89e60 (strcasecmp) redirected to 0x480170e (_vgnU_ifunc_wrapper)
+--18304-- REDIR: 0x362fe861c0 (strnlen) redirected to 0x480170e (_vgnU_ifunc_wrapper)
+--18304-- REDIR: 0x362fe8c130 (strncasecmp) redirected to 0x480170e (_vgnU_ifunc_wrapper)
+--18304-- REDIR: 0x362fe87bb0 (__GI_strrchr) redirected to 0x4a08ca0 (__GI_strrchr)
+--18304-- REDIR: 0x362fe860e0 (__GI_strlen) redirected to 0x4a09200 (__GI_strlen)
+--18304-- REDIR: 0x362fe845a0 (strcmp) redirected to 0x480170e (_vgnU_ifunc_wrapper)
+--18304-- REDIR: 0x362ff2fbc0 (__strcmp_sse42) redirected to 0x4a09df0 (strcmp)
+--18304-- REDIR: 0x3635a5f580 (operator new(unsigned long)) redirected to 0x4a082df (operator new(unsigned long))
+--18304-- REDIR: 0x362fe7f3e0 (malloc) redirected to 0x4a087fa (malloc)
+--18304-- REDIR: 0x3635a5f690 (operator new[](unsigned long)) redirected to 0x4a07c62 (operator new[](unsigned long))
+--18304-- REDIR: 0x362fe8e810 (memcpy@@GLIBC_2.14) redirected to 0x480170e (_vgnU_ifunc_wrapper)
+--18304-- REDIR: 0x362ff45a40 (__memcpy_ssse3_back) redirected to 0x4a0a1c0 (memcpy@@GLIBC_2.14)
+--18304-- REDIR: 0x362fe88600 (bcmp) redirected to 0x480170e (_vgnU_ifunc_wrapper)
+--18304-- REDIR: 0x362ff5afb0 (__memcmp_sse4_1) redirected to 0x4a0aee0 (bcmp)
+--18304-- REDIR: 0x362fe882b0 (memchr) redirected to 0x4a09f30 (memchr)
+--18304-- REDIR: 0x3635a5d8c0 (operator delete[](void*)) redirected to 0x4a06e95 (operator delete[](void*))
+--18304-- REDIR: 0x362fe7f8d0 (free) redirected to 0x4a0775f (free)
+--18304-- REDIR: 0x3635a5d890 (operator delete(void*)) redirected to 0x4a07345 (operator delete(void*))
+--18304-- REDIR: 0x362fe86090 (strlen) redirected to 0x480170e (_vgnU_ifunc_wrapper)
+--18304-- REDIR: 0x362ff60680 (__strlen_sse2_pminub) redirected to 0x4a091e0 (strlen)
+==18304== 
+==18304== HEAP SUMMARY:
+==18304==     in use at exit: 0 bytes in 0 blocks
+==18304==   total heap usage: 279 allocs, 279 frees, 27,549 bytes allocated
+==18304== 
+==18304== All heap blocks were freed -- no leaks are possible
+==18304== 
+==18304== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+--18304-- 
+--18304-- used_suppression:      2 glibc-2.5.x-on-SUSE-10.2-(PPC)-2a
+==18304== 
+==18304== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
